@@ -285,7 +285,6 @@
 
         .booking {
             margin: 20% 0;
-            width: 200px;
 
 
 
@@ -298,7 +297,7 @@
             }
 
             input {
-                font-size: 18px;
+                font-size: 1.1rem;
             }
 
             fieldset:nth-child(1) {
@@ -335,7 +334,7 @@
             fieldset:nth-child(2) {
                 display: flex;
                 justify-content: space-between;
-                gap: 5px;
+                gap: .2rem;
                 padding: 3px;
 
                 label {
