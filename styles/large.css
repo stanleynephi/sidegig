@@ -1,0 +1,600 @@
+@media only screen and (min-width : 1080px) {
+    body {}
+
+    header {
+        width: 100%;
+        position: fixed;
+        top: -2px;
+        background-color: black;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 10;
+
+
+        .buttons {
+            display: none;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-around;
+
+
+            li {
+                list-style: none;
+                margin-right: 50px;
+                font-size: 20px;
+
+
+                a {
+                    color: #5a5d80;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    color: white;
+                }
+
+
+            }
+
+        }
+
+
+    }
+
+    main {
+
+
+        .main {
+            width: 100%;
+            height: 110vh;
+            background: url(../images/front-view-friends-wearing-party-hats.jpg);
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+
+
+
+            h1 {
+                color: white;
+                z-index: inherit;
+                margin-bottom: -10px;
+                font-size: 25px;
+                text-transform: uppercase;
+            }
+
+            p {
+                color: white;
+                z-index: inherit;
+                font-size: 25px;
+            }
+
+            button {
+                align-self: center;
+                width: 13%;
+                height: 45px;
+
+                a {
+                    text-transform: capitalize;
+                    color: black;
+                }
+
+            }
+        }
+
+        .main::before {
+            content: "";
+            position: absolute;
+            top: 00;
+            left: 0;
+            width: 100%;
+            height: 110vh;
+            background-color: rgba(249, 244, 244, 0.643);
+            z-index: -1;
+        }
+
+
+        .aboutus {
+            width: 1263px;
+            align-items: center;
+            height: 110vh;
+            margin-top: 0%;
+            display: flex;
+            justify-content: space-around;
+
+            img {
+                width: 400px;
+            }
+
+            .aboutinfo {
+                /* 
+                width: 700px;
+                background-color: red; */
+                padding: 20px;
+                color: black;
+
+
+                h3 {
+                    font-size: 25px;
+                    text-transform: capitalize;
+                    margin-bottom: -30px;
+
+                }
+
+                h1 {
+                    font-size: 50px;
+                }
+
+                p {
+                    font-size: 15px;
+                }
+            }
+
+        }
+
+        .pakages {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            background-color: red;
+            height: 100vh;
+
+            h1 {
+                margin: 2% 0 8% 0;
+            }
+        }
+
+        .slideshow-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            width: 700px;
+            top: 10%;
+
+            .myslides {
+                display: none;
+                position: absolute;
+                align-self: auto;
+                transform: translateX(140px);
+
+            }
+
+            img {
+                background-color: black;
+                width: 300px;
+            }
+
+            .prev,
+            .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                margin-top: -22px;
+                padding: 16px;
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 0 0 0 0;
+                user-select: none;
+            }
+
+            .next {
+                right: 0;
+                border-radius: 0px 0 0 0px;
+            }
+
+            .prev:hover,
+            .next:hover {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+
+            .textContent {
+                color: black;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: -90px;
+                align-self: center;
+                width: 400px;
+                text-align: center;
+
+            }
+
+            .fade {
+                animation-name: fade;
+                animation-duration: 2.5s;
+            }
+
+        }
+
+        .testimonies {
+            background-color: #fff;
+            align-items: center;
+            text-align: center;
+            height: 100vh;
+        }
+
+        .testimonycontents {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+
+
+            .infoms {
+                margin-bottom: 20px;
+                height: 400px;
+                width: 300px;
+                overflow: hidden;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+                align-items: center;
+                background-color: red;
+                transition: transform 0.3s ease;
+                /* Add smooth transition effect */
+                transform: scale(1.1);
+
+                img {
+                    width: 250px;
+                    clip-path: circle();
+                }
+
+                p {
+                    height: fit-content;
+                }
+            }
+
+            .infoms:not(:hover) {
+                transform: scale(0.9);
+                /* Scale down all cards except the one being hovered */
+            }
+
+
+
+        }
+
+
+        #bookings {
+            height: 100vh;
+        }
+
+
+        .reveal.active {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+
+        .reveal {
+            transform: translateY(90px);
+            opacity: 0;
+            transition: all 2s ease;
+        }
+
+
+
+        .team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            transform: translateX(-10%);
+
+        }
+
+        .teammembers {
+            height: fit-content;
+            display: grid;
+            grid-template-columns: repeat(3, 300px);
+            gap: 20px;
+
+            .member {
+                width: 250px;
+                height: auto;
+                padding: 10px;
+                border: 1px solid gray;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+
+
+
+                img {
+                    width: 250px;
+                    height: 350px;
+                    display: block;
+                    border-radius: inherit;
+                }
+
+
+            }
+
+
+        }
+
+
+        .servicesdetails {
+            margin-top: 10%;
+            padding: 10px;
+            height: fit-content;
+
+
+            h3 {
+                text-align: center;
+            }
+
+            .detail1,
+            .detail2,
+            .detail3 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20%;
+            }
+
+            .detail1,
+            .detail3 {
+                flex-direction: row-reverse;
+                background-color: red;
+            }
+
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+        }
+
+        .booking {
+            height: auto;
+            width: 700px;
+            margin: 5% 8%;
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(2, 500px);
+            /* transform: translateX(10%); */
+        }
+
+        img {
+            width: 400px;
+        }
+
+        form {
+            width: 500px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: auto;
+            gap: 10px;
+
+        }
+
+        fieldset {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+
+        }
+
+        legend {
+            text-align: auto;
+            font-size: 20px;
+            padding: 20px;
+            text-decoration: underline;
+            text-transform: capitalize;
+        }
+
+        label {
+            display: flex;
+            flex-direction: row;
+            text-transform: capitalize;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label[for="name"] {
+            display: flex;
+            align-items: center;
+
+            .content {
+                display: grid;
+                margin-left: 25%;
+                grid-template-rows: repeat(2, 35px);
+                width: 300px;
+                gap: 10px;
+            }
+        }
+
+        label[for="age"] {
+            margin: 10px 0px;
+            display: flex;
+            justify-content: space-between;
+
+            .title {
+                display: grid;
+                align-items: center;
+                grid-template-rows: repeat(2, 35px);
+
+
+                .date {
+                    grid-row: 2/3;
+                }
+            }
+
+            .content {
+                margin-right: 3.5%;
+                width: 300px;
+                display: grid;
+                grid-template-rows: repeat(2, 35px);
+                gap: 10px;
+            }
+        }
+
+        label[for="contact"] {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .title {
+                display: grid;
+                grid-template-rows: repeat(2, 35px);
+                align-items: center;
+            }
+
+            .content {
+                margin-right: 3.5%;
+                width: 300px;
+                display: grid;
+                grid-template-rows: repeat(2, 35px);
+                gap: 10px;
+            }
+        }
+
+
+        label[for="address"] {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 200px;
+
+
+            .content {
+                margin-left: 20%;
+                width: 300px;
+                display: grid;
+                grid-template-rows: repeat(4, 35px);
+                gap: 10px;
+
+            }
+        }
+
+        fieldset:nth-child(3) {
+            display: flex;
+            flex-direction: row;
+
+            /* Style the label to resemble a button */
+            label {
+                display: inline-block;
+                padding: 5px 10px;
+                background-color: #ccc;
+                border: 1px solid #aaa;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-right: 10px;
+            }
+
+            input:checked {
+                background-color: lightgreen;
+            }
+
+        }
+
+        input[type="submit"] {
+            align-self: center;
+            height: 40px;
+            width: 30%;
+        }
+
+
+        input::placeholder {
+            font-size: 15px;
+        }
+
+
+        .ourlocation {
+            width: 100%;
+            position: relative;
+            margin-top: 0%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transform: translateX(-20%);
+        }
+
+        .contactus {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-bottom: 3%;
+        }
+    }
+
+    footer {
+        height: 30vh;
+        width: 101%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        background-color: yellow;
+        gap: 20px;
+
+        .socialmedia {
+            width: 20%;
+            display: grid;
+            grid-template-columns: repeat(2, 20px);
+            gap: 20px;
+            justify-content: center;
+        }
+
+        i {
+            font-size: 40px;
+        }
+
+
+
+    }
+
+
+
+
+
+
+
+
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .1
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideup {
+    from {
+        transform: translateY(0%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+}
