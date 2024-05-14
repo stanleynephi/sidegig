@@ -1,8 +1,7 @@
 @media only screen and (max-width:900px) {
 
     body {
-        max-width: 480px;
-        background-color: white;
+        color: white;
     }
 
     header {
@@ -224,11 +223,11 @@
             flex-direction: column;
             text-align: center;
 
-            margin: 20% 0;
+            margin: 30% 0;
 
             .testimonycontents {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
                 gap: 3%;
 
 
@@ -240,7 +239,7 @@
         }
 
         .members {
-            margin: 40% 0%;
+            margin: 55% 0%;
             text-align: center;
 
 
@@ -253,7 +252,7 @@
 
             .teammembers {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
                 gap: 2%;
             }
         }
@@ -266,7 +265,7 @@
 
             .servicedetail {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
                 gap: 2%;
                 position: relative;
 
@@ -285,9 +284,8 @@
         }
 
         .booking {
-            margin: 20% auto;
-            width: 100%;
-            padding: 10px 0;
+            margin: 20% 0;
+            width: 200px;
 
 
 
@@ -300,7 +298,7 @@
             }
 
             input {
-                font-size: 20px;
+                font-size: 18px;
             }
 
             fieldset:nth-child(1) {
@@ -308,7 +306,7 @@
                     display: flex;
                     flex-direction: column;
                     margin-bottom: 15px;
-                    font-size: 18px;
+                    font-size: 15px;
                     text-transform: capitalize;
                 }
 
@@ -337,7 +335,8 @@
             fieldset:nth-child(2) {
                 display: flex;
                 justify-content: space-between;
-                gap: 20px;
+                gap: 5px;
+                padding: 3px;
 
                 label {
                     display: flex;
@@ -345,8 +344,9 @@
                     justify-content: center;
                     height: 40px;
                     width: 30%;
-                    border: 2px solid black;
+                    border: 2px solid red;
                     border-radius: 10px;
+
 
                 }
 
@@ -355,10 +355,9 @@
                     border-radius: 50%;
                     width: 18px;
                     height: 18px;
-
                     border: 2px solid #999;
                     transition: 0.2s all linear;
-                    margin-right: 5px;
+                    margin-right: 2px;
                     position: relative;
                     top: -2px;
 
