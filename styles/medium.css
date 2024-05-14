@@ -1,7 +1,8 @@
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:900px) {
 
     body {
-        width: 100%;
+        max-width: 480px;
+        background-color: white;
     }
 
     header {
@@ -105,7 +106,7 @@
     }
 
     img {
-        width: 300px;
+        width: 250px;
     }
 
     main {
@@ -113,7 +114,6 @@
 
 
         .main {
-            width: 100%;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -145,6 +145,7 @@
             text-align: center;
             justify-content: center;
             align-items: center;
+
         }
 
 
@@ -182,7 +183,7 @@
 
             img {
                 background-color: black;
-                width: 70%;
+                width: 100%;
             }
 
             .prev,
