@@ -1,0 +1,100 @@
+@media screen and (max-width:767px) {
+    body {
+        display: flex;
+
+    }
+
+    img {
+        width: 350px;
+    }
+
+    p,
+    h1,
+    h2,
+    h3 {
+        text-align: center;
+    }
+
+    button {
+        transform: translateX(10rem);
+    }
+
+    /* header and navigation  */
+    header {
+        height: 20px;
+        display: grid;
+
+    }
+
+    .navigation {
+        position: absolute;
+        right: 0;
+
+
+        a {
+            display: none;
+        }
+    }
+
+    /* menu */
+    .hamburger {
+        display: block;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+
+    .line {
+        position: absolute;
+        height: 4px;
+        width: 40px;
+        background: #000;
+        transition: 0.5s;
+        right: 0;
+    }
+
+    /* steps of 12 are optional, could also be 10, 13 etc */
+    .line:nth-child(1) {
+        top: 5px;
+    }
+
+    .line:nth-child(2) {
+        top: 14px;
+    }
+
+    .line:nth-child(3) {
+        top: 23px;
+    }
+
+    /* translateY must be same as */
+    #hamburger:checked+.hamburger .line:nth-child(1) {
+        transform: translateY(8px) rotate(-45deg);
+    }
+
+    #hamburger:checked+.hamburger .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    #hamburger:checked+.hamburger .line:nth-child(3) {
+        transform: translateY(-12px) rotate(45deg);
+    }
+
+    /*open and close*/
+    .open {
+        position: relative;
+        width: 350px;
+        height: 200px;
+        display: flex;
+        background-color: #000;
+
+    }
+
+    .open a {
+        display: flex;
+        flex-direction: row;
+        z-index: 20;
+
+    }
+}
