@@ -128,3 +128,52 @@ function showCountry(data){
 }
 
 
+
+//create an age calculator by input
+let userInputs = document.querySelectorAll("#dateofbirth")
+let result = document.querySelector("#age")
+//prevent user from selecting future dates
+userInputs.forEach(input => {
+  input.max = new Date().toISOString().split("T")[0];
+});
+
+// Add event listener to each date input
+userInputs.forEach(input => {
+  input.addEventListener("input", function() {
+      CalculateAge(input);
+  });
+});
+
+// Calculate age function
+function CalculateAge(input) {
+  let birthdate = new Date(input.value);
+  let today = new Date();
+  let age = today.getFullYear() - birthdate.getFullYear();
+  let monthDifference = today.getMonth() - birthdate.getMonth();
+  let dayDifference = today.getDate() - birthdate.getDate();
+
+  // Adjust age if the birth date hasn't occurred yet this year
+  if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
+      age--;
+  }
+
+  if(age<18){
+    console.log("Too Young To Apply")
+    alert("You are too young to apply")
+
+    userInputs.forEach(
+      inputs => {
+        input.value = "";
+      }
+    )
+  }
+  else{
+    console.log("You are old enough to apply")
+  }
+}
+
+
+
+
+
+
