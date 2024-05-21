@@ -1,4 +1,4 @@
-@media all and (max-width:767px) {
+@media only screen and (max-width:767px) {
     body {
         display: flex;
         justify-content: center;
@@ -6,6 +6,8 @@
         background-color: #fff;
         max-width: 767px;
         border: 2px solid black;
+        padding: 20px;
+        overflow-x: hidden;
     }
 
     img {
@@ -139,7 +141,7 @@
 
 
         img {
-            transform: translateX(25%);
+            transform: translateX(6%);
         }
 
         .main {
