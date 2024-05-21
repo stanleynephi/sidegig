@@ -1,0 +1,176 @@
+@media screen and (max-width:767px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: auto;
+        background-color: #fff;
+        max-width: 767px;
+        border: 2px solid black;
+    }
+
+    img {
+        width: 300px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    /* menu */
+    .hamburger {
+        display: block;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+
+    .line {
+        position: absolute;
+        height: 4px;
+        width: 40px;
+        background: #000;
+        transition: 0.5s;
+        right: 0;
+    }
+
+    /* steps of 12 are optional, could also be 10, 13 etc */
+    .line:nth-child(1) {
+        top: 5px;
+    }
+
+    .line:nth-child(2) {
+        top: 14px;
+    }
+
+    .line:nth-child(3) {
+        top: 23px;
+    }
+
+    /* translateY must be same as */
+    #hamburger:checked+.hamburger .line:nth-child(1) {
+        transform: translateY(8px) rotate(-45deg);
+    }
+
+    #hamburger:checked+.hamburger .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    #hamburger:checked+.hamburger .line:nth-child(3) {
+        transform: translateY(-12px) rotate(45deg);
+    }
+
+    /*open and close*/
+    .open {
+        display: flex;
+        background-color: red;
+        position: absolute;
+        width: 30px;
+        left: 0;
+    }
+
+    .open a {
+        display: block;
+
+
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        position: absolute;
+        top: 10px;
+    }
+
+
+    .navigation {
+        position: absolute;
+        right: 1;
+
+
+        a {
+            display: none;
+        }
+    }
+
+
+    .open {
+        position: absolute;
+        width: fit-content;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        gap: 28px;
+        background-color: #000;
+        top: 15px;
+        left: -13px;
+        padding: 10px;
+        list-style: none;
+    }
+
+    .open a {
+        display: flex;
+        flex-direction: row;
+        z-index: 20;
+        font-size: 29px;
+        text-decoration: none;
+
+
+    }
+
+
+
+    /* mainpartsof */
+    main {
+
+        margin-top: 20px;
+
+        h1,
+        p,
+        button {
+            text-align: center;
+        }
+
+        p {
+            margin-top: -10px;
+        }
+
+
+        img {
+            transform: translateX(25%);
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            margin-bottom: 20px;
+
+            button {
+                height: 30px;
+                width: 40%;
+            }
+        }
+
+        .aboutus,
+        .testimonies,
+        .team {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .aboutus {
+            img {
+                transform: translateX(0%);
+            }
+        }
+
+    }
+}
