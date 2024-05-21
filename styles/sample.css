@@ -12,6 +12,10 @@
         overflow-x: hidden;
     }
 
+    h3 {
+        text-align: center;
+    }
+
     img {
         width: 300px;
     }
@@ -178,5 +182,105 @@
             }
         }
 
+        .slideshow-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            background-color: red;
+            padding: 20px 0px;
+
+            p {
+                margin-top: 20px;
+            }
+
+            button {
+                transform: translateX(46%);
+                width: 50%;
+                height: 40px;
+            }
+        }
+
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.4);
+            width: 30px;
+            height: 40px;
+            font-size: 30px;
+            color: white;
+        }
+
+        .prev {
+            left: 5px;
+        }
+
+
+        .next {
+            right: 5px;
+            align-self: auto;
+        }
+
+        .infoms {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+            img {
+                transform: translateX(-1%);
+            }
+
+
+            p {
+                margin-top: 20px;
+            }
+        }
+
+        .teammembers {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+
+        .member {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+
+            img {
+                transform: translateX(-1%);
+            }
+
+            button {
+                width: 10rem;
+            }
+        }
+
+
+
+
+    }
+
+
+
+
+    .reveal.active {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    .reveal {
+        transform: translateY(90px);
+        opacity: 0;
+        transition: all 2s ease;
     }
 }
