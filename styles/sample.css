@@ -192,6 +192,11 @@
             background-color: red;
             padding: 20px 0px;
 
+
+            img {
+                transform: translateX(13%);
+            }
+
             p {
                 margin-top: 20px;
             }
