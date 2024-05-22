@@ -32,6 +32,9 @@
         display: none;
     }
 
+    h2 {
+        z-index: 10;
+    }
 
     .line {
         position: absolute;
@@ -71,14 +74,15 @@
     /*open and close*/
     .open {
         display: flex;
-        background-color: red;
         position: absolute;
         width: 30px;
         left: 0;
+
     }
 
     .open a {
         display: block;
+
 
 
     }
@@ -90,6 +94,7 @@
         width: 90%;
         position: absolute;
         top: 10px;
+        z-index: 90;
 
 
         img {
@@ -106,8 +111,15 @@
         right: 0;
         display: none;
 
+
         li {
-            background-color: red;
+            font-size: 30px;
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            transform: translateX(150%);
         }
 
         a {
@@ -120,18 +132,20 @@
         position: absolute;
         width: fit-content;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        width: 105.8%;
+        height: 89.5vh;
         gap: 28px;
-        background-color: #000;
-        top: 15px;
+        background-color: #0da3ee;
+        top: 22px;
+        left: -21px;
         padding: 10px;
         list-style: none;
     }
 
     .open a {
         display: flex;
-        flex-direction: row;
-        text-decoration: none;
+
 
 
     }
@@ -147,6 +161,7 @@
         p,
         button {
             text-align: center;
+            z-index: 10;
         }
 
         p {
@@ -193,10 +208,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: auto;
-            background-color: red;
+            width: 90%;
             padding: 20px 0px;
-
+            background-color: #fff;
+            transform: translateX(5%);
 
             img {
                 transform: translateX(10%);
@@ -235,11 +250,20 @@
             align-self: auto;
         }
 
+
+        .testimonycontents {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
         .infoms {
             display: flex;
             flex-direction: column;
             align-items: center;
-
+            background-color: white;
+            padding: 20px 0;
 
             img {
                 transform: translateX(-1%);
@@ -358,18 +382,180 @@
             }
         }
 
-    }
-
-    footer {
-        display: flex;
-        flex-direction: column;
-
-        .socialmedia {
+        .servicesdetails {
+            margin: 30% 0;
             display: flex;
-            flex-direction: row;
-            gap: 20px;
-            transform: translateX(35%);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+
         }
+
+        .skills1 {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            .outer {
+                width: 170px;
+                height: 170px;
+                border-radius: 50%;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                -webkit-box-shadow: 0 1px 3.5px 5.5px #4d4c4c;
+                -moz-box-shadow: 0 1px 3.5px 5.5px #4d4c4c;
+                box-shadow: 0 1px 3.5px 5.5px #4d4c4c;
+            }
+
+            .inner {
+                width: 190px;
+                height: 170px;
+                border-radius: 60%;
+                clip-path: circle(120%);
+                -webkit-box-shadow: inset 0 1px 11px 6.5px #4d4c4c;
+                -moz-box-shadow: inset 0 1px 11px 6.5px #4d4c4c;
+                box-shadow: inset 0 1px 11px 6.5px #4d4c4c;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            circle {
+                fill: none;
+                stroke: url(#GradientColor1);
+                stroke-width: 20px;
+                stroke-dasharray: 590;
+                stroke-dashoffset: 590;
+                animation: anim1 2s linear forwards;
+
+            }
+
+            svg {
+                position: absolute;
+            }
+
+
+        }
+
+
+        .skills2 {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            .outer {
+                width: 170px;
+                height: 170px;
+                border-radius: 50%;
+                -webkit-box-shadow: 0 1px 3.5px 5.5px #4d4c4c;
+                -moz-box-shadow: 0 1px 3.5px 5.5px #4d4c4c;
+                box-shadow: 0 1px 3.5px 5.5px #4d4c4c;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .inner {
+                width: 190px;
+                height: 170px;
+                border-radius: 60%;
+                clip-path: circle(120%);
+                -webkit-box-shadow: inset 0 1px 11px 6.5px #4d4c4c;
+                -moz-box-shadow: inset 0 1px 11px 6.5px #4d4c4c;
+                box-shadow: inset 0 1px 11px 6.5px #4d4c4c;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            circle {
+                fill: none;
+                stroke: url(#GradientColor2);
+                stroke-width: 20px;
+                stroke-dasharray: 590;
+                stroke-dashoffset: 590;
+                animation: anim2 2s linear forwards;
+
+            }
+
+            svg {
+                position: absolute;
+
+            }
+
+
+        }
+
+
+
+        .skills3 {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            .outer {
+                width: 170px;
+                height: 170px;
+                border-radius: 50%;
+                -webkit-box-shadow: 0 1px 3.5px 5.5px #4d4c4c;
+                -moz-box-shadow: 0 1px 3.5px 5.5px #4d4c4c;
+                box-shadow: 0 1px 3.5px 5.5px #4d4c4c;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .inner {
+                width: 190px;
+                height: 170px;
+                border-radius: 60%;
+                clip-path: circle(120%);
+                -webkit-box-shadow: inset 0 1px 11px 6.5px #4d4c4c;
+                -moz-box-shadow: inset 0 1px 11px 6.5px #4d4c4c;
+                box-shadow: inset 0 1px 11px 6.5px #4d4c4c;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            circle {
+                fill: none;
+                stroke: url(#GradientColor3);
+                stroke-width: 20px;
+                stroke-dasharray: 590;
+                stroke-dashoffset: 590;
+                animation: anim3 2s linear forwards;
+            }
+
+            svg {
+                position: absolute;
+            }
+        }
+
+
+
+
+
     }
 
 
@@ -384,5 +570,70 @@
         transform: translateY(90px);
         opacity: 0;
         transition: all 2s ease;
+    }
+
+    @keyframes anim1 {
+        100% {
+            stroke-dashoffset: 59;
+        }
+    }
+
+    @keyframes anim2 {
+        100% {
+            stroke-dashoffset: 117;
+        }
+    }
+
+    @keyframes anim3 {
+        100% {
+            stroke-dashoffset: 206.5;
+        }
+    }
+
+
+
+    /* colors and designs */
+
+    .main::before {
+        content: "";
+        width: 100%;
+        height: 300px;
+        background-image: url("/images/front-view-friends-wearing-party-hats.jpg");
+        opacity: .7;
+        /* Fallback for browsers that don't support background shorthand */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        background-attachment: fixed;
+    }
+
+    .aboutus::before {
+        content: "";
+        width: 114%;
+        height: 100%;
+        background-color: rgb(202, 240, 248);
+        position: absolute;
+        top: 125px;
+        z-index: -1;
+    }
+
+    .testimonies::before {
+        content: "";
+        width: 114%;
+        height: 100%;
+        background-color: rgb(202, 240, 248);
+        position: absolute;
+        z-index: -1;
+    }
+
+
+    .servicesdetails::before {
+        content: "";
+        width: 114%;
+        height: 100%;
+        background-color: rgb(202, 240, 248);
+        position: absolute;
+        z-index: -1;
     }
 }

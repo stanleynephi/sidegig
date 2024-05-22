@@ -173,6 +173,53 @@ function CalculateAge(input) {
 }
 
 
+//create the values for each level
+let $htmlCss = document.querySelector(".skills1 .level")
+let $JavaScript = document.querySelector(".skills2 .level")
+let $Python = document.querySelector(".skills3 .level")
+
+
+let $htmlCssvalue = 90
+let $JavaScriptvalue = 70
+let $Pythonvalue = 65
+
+
+let $counter1 = 0
+let $counter2 = 0
+let $counter3 = 0
+
+
+//set interval and use multiple if conditions for all the levels
+setInterval(() => {
+  if ($counter1 == $htmlCssvalue){
+    clearInterval()
+    document.querySelector(".skills1").classList.add("circle")
+  }
+  else{
+    $counter1 += 1
+    $htmlCss.innerHTML= $counter1 + "%"
+    document.querySelector(".skills1").classList.remove("circle")
+  
+  }
+
+  if ($counter2 == $JavaScriptvalue){
+    clearInterval()
+  }
+  else{
+    $counter2 += 1
+    $JavaScript.innerHTML= $counter1 + "%"
+  }
+
+  if($counter3 == $Pythonvalue){
+    clearInterval()
+  }
+  else{
+    $counter3 += 1
+    $Python.innerHTML= $counter3 + "%"
+  }
+},20)
+
+
 
 
 
