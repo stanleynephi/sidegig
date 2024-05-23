@@ -124,6 +124,11 @@
 
         a {
             display: none;
+            text-decoration: none;
+            border-top: 3px solid white;
+            border-bottom: 3px solid white;
+            padding: 10px;
+            color: white;
         }
     }
 
@@ -141,6 +146,7 @@
         left: -21px;
         padding: 10px;
         list-style: none;
+        animation: fadein .9s ease-in-out;
     }
 
     .open a {
@@ -214,7 +220,7 @@
             transform: translateX(5%);
 
             img {
-                transform: translateX(10%);
+                transform: translateX(0%);
             }
 
             p {
@@ -591,6 +597,17 @@
     }
 
 
+    @keyframes fadein {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 100;
+        }
+    }
+
+
 
     /* colors and designs */
 
@@ -603,7 +620,7 @@
         /* Fallback for browsers that don't support background shorthand */
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 300%;
         position: absolute;
         background-attachment: fixed;
     }
