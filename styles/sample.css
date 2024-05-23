@@ -220,7 +220,8 @@
             transform: translateX(5%);
 
             img {
-                transform: translateX(0%);
+                transform: translateX(7%);
+                width: 310px;
             }
 
             p {
