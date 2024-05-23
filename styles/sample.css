@@ -209,6 +209,9 @@
         }
 
         .slideshow-container {
+            justify-self: center;
+            align-self: center;
+            margin: 0 25px;
             position: relative;
             display: flex;
             flex-direction: column;
@@ -217,7 +220,7 @@
             width: 90%;
             padding: 20px 0px;
             background-color: #fff;
-            transform: translateX(5%);
+            border: 3px solid black;
 
             img {
                 align-self: center;

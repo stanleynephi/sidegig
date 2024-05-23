@@ -221,6 +221,15 @@ setInterval(() => {
 
 
 
+document.querySelectorAll(".navigation a").forEach(
+  link=>
+    link.addEventListener("click",()=>{
+      navigation.classList.remove('open');
+      hamburger.classList.remove('open');
+    })
+)
+
+
 
 
 
