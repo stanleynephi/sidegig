@@ -7,8 +7,11 @@
         align-items: auto;
         background-color: #fff;
         max-width: 767px;
-        padding: 20px;
+        width: 100%;
+        padding: 0px;
         overflow-x: hidden;
+        margin: 0 10%;
+        border: 3px solid black;
     }
 
     h3 {
@@ -144,12 +147,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        width: 108%;
         height: fit-content;
         gap: 28px;
         background-color: black;
         top: 22px;
-        left: -10px;
+        left: -30px;
         padding: 10px;
         list-style: none;
         animation: fadein .9s ease-in-out;
@@ -385,7 +388,8 @@
         form {
             display: flex;
             flex-direction: column;
-            background-color: blue;
+            color: white;
+            margin: 5% 0;
 
 
             .userdetails {
@@ -467,6 +471,7 @@
             align-items: center;
             gap: 4rem;
             width: 90%;
+            color: black;
 
             .knowledge {
                 display: flex;
@@ -480,8 +485,12 @@
                     text-transform: uppercase;
                     font-size: 20px;
                     border-bottom: 3px solid black;
+                    background-color: blue;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                     width: fit-content;
                     text-align: center;
+                    font-size: 30px;
                 }
 
                 .level {
@@ -744,7 +753,7 @@
         content: "";
         width: 109%;
         height: 100%;
-        background-color: rgb(202, 240, 248);
+        background-color: white;
         position: absolute;
         z-index: -1;
     }
@@ -757,5 +766,14 @@
         position: absolute;
         background-color: #000;
         opacity: .7;
+    }
+
+    form::before {
+        content: "";
+        position: absolute;
+        background-color: #000;
+        width: 100%;
+        height: 80%;
+        z-index: -1;
     }
 }
