@@ -9,6 +9,7 @@
         max-width: 767px;
         padding: 20px;
         overflow-x: hidden;
+        border: 3px solid black;
     }
 
     h3 {
@@ -21,6 +22,7 @@
 
     p {
         font-size: 20px;
+
     }
 
     /* menu */
@@ -112,14 +114,17 @@
         display: none;
 
 
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
         li {
             font-size: 30px;
             margin-top: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100px;
-            transform: translateX(150%);
+            width: fit-content;
         }
 
         a {
@@ -129,6 +134,7 @@
             border-bottom: 3px solid white;
             padding: 10px;
             color: white;
+
         }
     }
 
@@ -138,12 +144,13 @@
         width: fit-content;
         display: flex;
         flex-direction: column;
-        width: 105.8%;
-        height: 89.5vh;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
         gap: 28px;
-        background-color: #0da3ee;
+        background-color: black;
         top: 22px;
-        left: -21px;
+        left: -10px;
         padding: 10px;
         list-style: none;
         animation: fadein .9s ease-in-out;
@@ -183,13 +190,13 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-
             margin-bottom: 20px;
 
             button {
                 height: 30px;
                 width: 40%;
             }
+
         }
 
         .aboutus,
@@ -203,28 +210,51 @@
 
 
         .aboutus {
+            color: white;
+
             img {
                 transform: translateX(0%);
             }
         }
 
         .slideshow-container {
-            justify-self: center;
-            align-self: center;
-            margin: 0 25px;
+            margin: 0 20px;
             position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 90%;
-            padding: 20px 0px;
+            width: fit-content;
             background-color: #fff;
-            border: 3px solid black;
+            border: 3px solid red;
 
-            img {
-                align-self: center;
-                padding: 0 8px;
+
+
+            .myslides {
+
+                .textContent {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+
+                    picture {
+                        background-color: red;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+
+                        img {
+                            transform: translateX(0%);
+                        }
+                    }
+
+                    button {
+                        transform: translateX(0%);
+                    }
+                }
             }
 
             p {
@@ -235,6 +265,10 @@
                 transform: translateX(46%);
                 width: 50%;
                 height: 40px;
+            }
+
+            .textContent {
+                height: 110%;
             }
         }
 
@@ -261,52 +295,78 @@
         }
 
 
-        .testimonycontents {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        .testimonies {
+            margin-top: 30px;
+            color: white;
+
+            .testimonycontents {
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+            }
+
+            .infoms {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: white;
+                padding: 20px 0;
+
+                color: #000;
+
+                img {
+                    transform: translateX(-1%);
+                }
+
+
+                p {
+                    margin-top: 20px;
+                }
+            }
         }
 
-        .infoms {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: white;
-            padding: 20px 0;
 
-            img {
-                transform: translateX(-1%);
+
+        .team {
+            margin-top: 30px;
+            background-image: url("/images/front-view-friends-wearing-party-hats.jpg");
+            background-attachment: fixed;
+            background-size: cover;
+
+            .teammembers {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 200px;
             }
 
 
-            p {
-                margin-top: 20px;
-            }
-        }
-
-        .teammembers {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
+            .member {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
 
 
-        .member {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
+                img {
+                    transform: translateX(-1%);
+                }
 
-
-            img {
-                transform: translateX(-1%);
+                button {
+                    width: 10rem;
+                    height: 35px;
+                }
             }
 
-            button {
-                width: 10rem;
-                height: 35px;
+
+            h2,
+            h1 {
+                color: white;
+                z-index: 10;
+
             }
         }
 
@@ -326,6 +386,7 @@
         form {
             display: flex;
             flex-direction: column;
+            background-color: blue;
 
 
             .userdetails {
@@ -376,6 +437,12 @@
                 border: 2px solid black;
             }
 
+
+            fieldset {
+                border: none;
+                width: 110%;
+            }
+
         }
 
         .ourlocation {
@@ -393,13 +460,14 @@
         }
 
         .servicesdetails {
-            margin: 30% 0;
+            margin: 10% 5%;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            justify-self: center;
             align-items: center;
             gap: 4rem;
-
+            width: 90%;
 
             .knowledge {
                 display: flex;
@@ -411,10 +479,15 @@
                 h1 {
                     margin-bottom: -30px;
                     text-transform: uppercase;
-                    font-size: 30px;
+                    font-size: 20px;
                     border-bottom: 3px solid black;
                     width: fit-content;
                     text-align: center;
+                }
+
+                .level {
+                    font-size: 35px;
+                    font-weight: bold;
                 }
             }
 
@@ -635,7 +708,7 @@
 
     .main::before {
         content: "";
-        width: 100%;
+        width: auto;
         height: 300px;
         background-image: url("/images/front-view-friends-wearing-party-hats.jpg");
         opacity: .7;
@@ -649,19 +722,20 @@
 
     .aboutus::before {
         content: "";
-        width: 114%;
+        width: 100%;
         height: 100%;
-        background-color: rgb(202, 240, 248);
+
+        background-color: #000;
         position: absolute;
         top: 125px;
-        z-index: -1;
+        z-index: -2;
     }
 
     .testimonies::before {
         content: "";
-        width: 114%;
+        width: 100%;
         height: 100%;
-        background-color: rgb(202, 240, 248);
+        background-color: black;
         position: absolute;
         z-index: -1;
     }
@@ -669,10 +743,20 @@
 
     .servicesdetails::before {
         content: "";
-        width: 114%;
+        width: 109%;
         height: 100%;
         background-color: rgb(202, 240, 248);
         position: absolute;
         z-index: -1;
+    }
+
+
+    .team::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: #000;
+        opacity: .7;
     }
 }

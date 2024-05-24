@@ -82,8 +82,8 @@
                 <source media="(max-width: 797px)" srcset="./images/imagessmall.webp">
                 <source media="(min-width: 798px)" srcset="./images/medium.webp">
                 <img src="./images/medium.webp" alt="Descriptive alt text" />
-            </picture>
-            <h1>Front-End Web Development</h1>
+               </picture>
+               <h1>Front-End Development</h1>
               <p>
                 <ul>
                   <li>develop user friendly websites and landing pages</li>
@@ -166,6 +166,7 @@
       <!-- ourteam -->
 
       <section class="team members doctors reveal" id="team">
+        <div class="overlay"></div>
         <h2>Education</h2>
         <div class="teammembers">
           <div class="member">
@@ -354,8 +355,7 @@
               <legend>client information</legend>
               <label>first name<input type="text" name="userfname" id="fname" required></label>
               <label>last name <input type="text" name="userlname" id="lname" required></label>
-              <label>date of birth <input type="date" name="dateofbirth" id="dateofbirth" required></label>
-              <label>tel<input type="tel" name="userphone" id="phonenumber" required></label>
+                            <label>tel<input type="tel" name="userphone" id="phonenumber" required></label>
               <label>email<input type="email" name="email" id="email" required></label>
               <label>address 
                 <input type="text" name="address1" id="address1" placeholder="address1" required>
@@ -368,16 +368,10 @@
             <fieldset>
               <legend>packages</legend>
               <label>
-                <input type="radio" name="package"required> One
+                <input type="checkbox" name="package"required> web developement
             </label>
             <label>
-                <input type="radio" name="package"required> Two
-            </label>
-            <label>
-                <input type="radio" name="package"required> Three
-            </label>
-            <label>
-                <input type="radio" name="package"required> Four
+                <input type="checkbox" name="package"required> language tutoring(french)
             </label>
             </fieldset>
 
