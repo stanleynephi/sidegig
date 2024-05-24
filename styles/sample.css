@@ -7,6 +7,7 @@
         align-items: auto;
         background-color: #fff;
         max-width: 767px;
+        width: 100%;
         padding: 20px;
         overflow-x: hidden;
         border: 3px solid black;
