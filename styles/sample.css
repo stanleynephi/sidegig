@@ -24,16 +24,31 @@ header {
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
+        align-items: center;
 
         .line {
             display: block;
             width: 30px;
             height: 5px;
             background-color: black;
+            margin-bottom: 2px;
+            transition: 0.5s;
         }
 
-        .line {
-            margin-bottom: 2px;
+        input#hamburger {
+            display: none;
+        }
+
+        #hamburger:checked+.hamburger .line:nth-child(1) {
+            transform: translateY(12px) rotate(-45deg);
+        }
+
+        #hamburger:checked+.hamburger .line:nth-child(2) {
+            opacity: 0;
+        }
+
+        #hamburger:checked+.hamburger .line:nth-child(3) {
+            transform: translateY(-12px) rotate(45deg);
         }
     }
 }
