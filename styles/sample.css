@@ -101,3 +101,81 @@ header {
         }
     }
 }
+
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        text-align: center;
+        height: fit-content;
+        padding: 10px;
+        border: 3px solid red;
+
+        button {
+            width: 200px;
+            height: 45px;
+        }
+
+        h1 {
+            margin-bottom: -10px;
+        }
+    }
+
+    .aboutus {
+        margin-top: -20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+
+        img {
+            width: 100%;
+        }
+    }
+
+
+    .pakages {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+
+
+        .slideshow-container {
+            position: relative;
+            border: 3px solid black;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            padding: 10px;
+            font-size: 30px;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    }
+}
