@@ -1,6 +1,11 @@
 body {
     display: flex;
     flex-direction: column;
+
+
+    img {
+        width: 300px;
+    }
 }
 
 header {
@@ -9,15 +14,26 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: red;
 
     img {
         display: block;
         width: 20px;
     }
-}
 
+    .controls {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
 
-img {
-    width: 300px;
+        .line {
+            display: block;
+            width: 30px;
+            height: 5px;
+            background-color: black;
+        }
+
+        .line {
+            margin-bottom: 2px;
+        }
+    }
 }
