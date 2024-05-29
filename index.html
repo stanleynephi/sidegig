@@ -279,85 +279,14 @@
           <source media="(min-width: 798px)" srcset="./images/medium.webp">
           <img src="./images/medium.webp" alt="Descriptive alt text" />
       </picture>
-       <div class="largeforms">
-        <form action="#" method="get">
-          <h1>Book Now!</h1>
-          <fieldset>
-            <legend>client info</legend>
-            <label for="name">
-              <div class="title">
-                name
-              </div>
-           <div class="content">
-            <input type="text" name="name" placeholder="firstname*"required>
-            <input type="text" name="name" placeholder="lastname*"required>
-           </div>
-            </label>
-            <label for="age">
-              <div class="title">
-                <div class="date">
-                  date of birth:
-                </div>
-                <div class="age">
-                  age
-                </div>
-              </div>
-              <div class="content">
-                <input type="number" name="age" min="0" max="100" placeholder="age" required>
-                <input type="date" name="dateofbirth" id="dateofbirth"required>
-              </div>
-            </label>
-            <label for="contact">
-              <div class="title">
-                <div class="phone">Tel:</div>
-                <div class="email">Email</div>
-              </div>
-              <div class="content">
-                <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="(000)-000-000">
-                <input type="email" name="mail" placeholder="someone@example.com" required>
-              </div>
-            </label>
-            <label for="address">
-              <div class="title">Address:</div>
-              <div class="content">
-                <input type="text" name="address" id="address" placeholder="address">
-                <input type="text" name="address" id="address" placeholder="address">
-                <select name="country" id="country">please select a city
-                  <option value="" id="noval">please select a country</option>
-                </select>
-              </div>
-            </label>
-          </fieldset>
-          <fieldset class="second">
-            <legend>Package</legend>
-            <label>
-                <input type="radio" name="package"required> One
-            </label>
-            <label>
-                <input type="radio" name="package"required> Two
-            </label>
-            <label>
-                <input type="radio" name="package"required> Three
-            </label>
-            <label>
-                <input type="radio" name="package"required> Four
-            </label>
-        </fieldset>
 
-        <label>
-          <input type="submit" name="submit" id="bookingsubmit">
-        </label>
-
-        </form>
-       </div>
-
-        <div class="mobileforms">
+        <div class="forms">
           <form action="./index.html" method="get" autocomplete="on">
             <fieldset class="userdetails">
               <legend>client information</legend>
               <label>first name<input type="text" name="userfname" id="fname" required></label>
               <label>last name <input type="text" name="userlname" id="lname" required></label>
-                            <label>tel<input type="tel" name="userphone" id="phonenumber" required></label>
+              <label>tel<input type="tel" name="userphone" id="phonenumber" required></label>
               <label>email<input type="email" name="email" id="email" required></label>
               <label>address 
                 <input type="text" name="address1" id="address1" placeholder="address1" required>
@@ -371,10 +300,15 @@
               <legend>packages</legend>
               <label>
                 <input type="checkbox" name="package"required> web developement
-            </label>
-            <label>
+              </label>
+              <label>
                 <input type="checkbox" name="package"required> language tutoring(french)
-            </label>
+              </label>
+            </fieldset>
+            <fieldset>
+              <label>leave a message
+                <textarea name="additional info" id="additionalinfo"></textarea>
+              </label>
             </fieldset>
 
             <label>
