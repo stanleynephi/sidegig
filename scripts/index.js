@@ -31,6 +31,10 @@ function showSlides(n){
 }
 
 
+
+
+
+
 window.addEventListener("scroll",reveal);
 
 // function to activate the code
@@ -173,51 +177,41 @@ function CalculateAge(input) {
 }
 
 
-//create the values for each level
-let $htmlCss = document.querySelector(".skills1 .level")
-let $JavaScript = document.querySelector(".skills2 .level")
-let $Python = document.querySelector(".skills3 .level")
+let $htmlCss = document.querySelector(".skills1 .level");
+let $JavaScript = document.querySelector(".skills2 .level");
+let $Python = document.querySelector(".skills3 .level");
 
+let $htmlCssvalue = 90;
+let $JavaScriptvalue = 70;
+let $Pythonvalue = 65;
 
-let $htmlCssvalue = 90
-let $JavaScriptvalue = 70
-let $Pythonvalue = 65
+let $counter1 = 0;
+let $counter2 = 0;
+let $counter3 = 0;
 
-
-let $counter1 = 0
-let $counter2 = 0
-let $counter3 = 0
-
-
-//set interval and use multiple if conditions for all the levels
-setInterval(() => {
-  if ($counter1 == $htmlCssvalue){
-    clearInterval()
-    document.querySelector(".skills1").classList.add("circle")
-  }
-  else{
-    $counter1 += 1
-    $htmlCss.innerHTML= $counter1 + "%"
-    document.querySelector(".skills1").classList.remove("circle")
-  
+let intervalId = setInterval(() => {
+  if ($counter1 == $htmlCssvalue && $counter2 == $JavaScriptvalue && $counter3 == $Pythonvalue) {
+    clearInterval(intervalId);
   }
 
-  if ($counter2 == $JavaScriptvalue){
-    clearInterval()
-  }
-  else{
-    $counter2 += 1
-    $JavaScript.innerHTML= $counter1 + "%"
+  if ($counter1 < $htmlCssvalue) {
+    $counter1 += 1;
+    $htmlCss.innerHTML = $counter1 + "%";
+    document.querySelector(".skills1").classList.remove("circle");
+  } else {
+    document.querySelector(".skills1").classList.add("circle");
   }
 
-  if($counter3 == $Pythonvalue){
-    clearInterval()
+  if ($counter2 < $JavaScriptvalue) {
+    $counter2 += 1;
+    $JavaScript.innerHTML = $counter2 + "%";
   }
-  else{
-    $counter3 += 1
-    $Python.innerHTML= $counter3 + "%"
+
+  if ($counter3 < $Pythonvalue) {
+    $counter3 += 1;
+    $Python.innerHTML = $counter3 + "%";
   }
-},20)
+}, 20);
 
 
 
@@ -229,6 +223,48 @@ document.querySelectorAll(".navigation a").forEach(
 
     })
 )
+
+
+
+
+let slidesindex = 1;
+showslides(slidesindex);
+
+function currentslide(n) {
+    showslides(slidesindex = n);
+}
+
+function showslides(n) {
+    let i;
+    let slides = document.getElementsByClassName("infoms");
+
+    if (n > slides.length) {
+        slidesindex = 1;
+    }
+
+    if (n < 1) {
+        slidesindex = slides.length;
+    }
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[slidesindex - 1].style.display = "block";
+}
+
+function plusSlides(n) {
+    showslides(slidesindex += n);
+}
+
+// Automatically change slides every 2 seconds
+function autoShowSlides() {
+    plusSlides(1);
+    setTimeout(autoShowSlides, 2000); // Adjust the interval as needed
+}
+
+autoShowSlides();
+
 
 
 

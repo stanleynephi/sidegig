@@ -56,7 +56,7 @@ header {
 
         .buttons {
             position: fixed;
-            z-index: 20;
+            z-index: 21;
             background-color: white;
             height: 40px;
             width: 45px;
@@ -94,6 +94,8 @@ header {
             padding: 10px;
             background-color: red;
             transition: 0.5s;
+
+            z-index: 20;
 
             a {
                 display: flex;
@@ -153,10 +155,15 @@ main {
 
         .slideshow-container {
             position: relative;
-            border: 3px solid black;
+            border: 3px solid red;
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
             padding: 20px;
+            height: 100%;
+            text-align: center;
+
         }
 
         .prev,
@@ -178,4 +185,231 @@ main {
             right: 0;
         }
     }
+
+    .testimonies {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        .testimonycontents {
+            border: 2px solid red;
+            position: relative;
+            text-align: center;
+            padding: 20px;
+
+            .infoms {
+                width: 300px;
+            }
+        }
+
+    }
+
+
+    .team {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+
+
+    .servicesdetails {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .knowledge {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skills1 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+
+
+        svg {
+            position: absolute;
+            top: -24px;
+            left: 5;
+        }
+
+    }
+
+    .skills1 .outer {
+        width: 200px;
+        height: 200px;
+        border: 3px solid yellow;
+        border-radius: 50%;
+        padding: 33px;
+        box-shadow: 6px 6px 10px -1px,
+            -6px -6px 10px -1px;
+
+    }
+
+
+    .skills1 .inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 195px;
+        width: 193px;
+        border: 3px solid yellow;
+        border-radius: 50%;
+        box-shadow: inset 6px 6px 10px -1px,
+            -6px -6px 10px -1px;
+    }
+
+    .level {}
+
+    .skills1 circle {
+        fill: none;
+        stroke: green;
+        stroke-width: 30;
+        stroke-dasharray: 735;
+        stroke-dashoffset: 0;
+        animation: anim1 2s linear forwards;
+    }
+
+
+
+    .skills2 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+
+
+        svg {
+            position: absolute;
+            top: -24px;
+            left: 5;
+        }
+
+    }
+
+    .skills2 .outer {
+        width: 200px;
+        height: 200px;
+        border: 3px solid yellow;
+        border-radius: 50%;
+        padding: 33px;
+        box-shadow: 6px 6px 10px -1px,
+            -6px -6px 10px -1px;
+
+    }
+
+
+    .skills2 .inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 195px;
+        width: 193px;
+        border: 3px solid yellow;
+        border-radius: 50%;
+        box-shadow: inset 6px 6px 10px -1px,
+            -6px -6px 10px -1px;
+    }
+
+    .level {}
+
+    .skills2 circle {
+        fill: none;
+        stroke: green;
+        stroke-width: 30;
+        stroke-dasharray: 735;
+        stroke-dashoffset: 0;
+        animation: anim2 2s linear forwards;
+    }
+
+
+
+    .skills3 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+
+
+        svg {
+            position: absolute;
+            top: -24px;
+            left: 5;
+        }
+
+    }
+
+    .skills3 .outer {
+        width: 200px;
+        height: 200px;
+        border: 3px solid yellow;
+        border-radius: 50%;
+        padding: 33px;
+        box-shadow: 6px 6px 10px -1px,
+            -6px -6px 10px -1px;
+
+    }
+
+
+    .skills3 .inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 195px;
+        width: 193px;
+        border: 3px solid yellow;
+        border-radius: 50%;
+        box-shadow: inset 6px 6px 10px -1px,
+            -6px -6px 10px -1px;
+    }
+
+    .level {}
+
+    .skills3 circle {
+        fill: none;
+        stroke: green;
+        stroke-width: 30;
+        stroke-dasharray: 735;
+        stroke-dashoffset: 0;
+        animation: anim3 2s linear forwards;
+    }
+}
+
+
+
+@keyframes anim1 {
+    100% {
+        stroke-dashoffset: 73.5;
+    }
+
+}
+
+@keyframes anim2 {
+    100% {
+        stroke-dashoffset: 220.5;
+    }
+
+}
+
+@keyframes anim3 {
+    100% {
+        stroke-dashoffset: 257.25;
+    }
+
 }
