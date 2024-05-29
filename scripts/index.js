@@ -253,13 +253,13 @@ function showslides(n) {
     slides[slidesindex - 1].style.display = "block";
 }
 
-function plusSlides(n) {
+function plusslides(n) {
     showslides(slidesindex += n);
 }
 
 // Automatically change slides every 2 seconds
 function autoShowSlides() {
-    plusSlides(1);
+    plusslides(1);
     setTimeout(autoShowSlides, 2000); // Adjust the interval as needed
 }
 

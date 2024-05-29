@@ -94,8 +94,7 @@ header {
             padding: 10px;
             background-color: red;
             transition: 0.5s;
-
-            z-index: 20;
+            z-index: 10;
 
             a {
                 display: flex;
@@ -151,30 +150,32 @@ main {
         justify-content: center;
         text-align: center;
         padding: 20px;
+        height: auto;
+        position: relative;
+
 
 
         .slideshow-container {
             position: relative;
-            border: 3px solid red;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             padding: 20px;
-            height: 100%;
+            height: auto;
             text-align: center;
-
         }
 
         .prev,
         .next {
-            cursor: pointer;
+            /* cursor: pointer; */
             position: absolute;
             top: 50%;
             padding: 10px;
             font-size: 30px;
             font-weight: bold;
             background-color: rgba(0, 0, 0, 0.6);
+            z-index: inherit;
         }
 
         .prev {
@@ -183,6 +184,13 @@ main {
 
         .next {
             right: 0;
+        }
+
+
+        button {
+            width: 200px;
+            height: 40px;
+            text-align: center;
         }
     }
 
@@ -535,6 +543,7 @@ footer {
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        text-align: center;
         gap: 20px;
     }
 }
