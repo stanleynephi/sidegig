@@ -3,6 +3,10 @@ body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    background: url(/images/front-view-friends-wearing-party-hats.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     img {
         width: 300px;
@@ -16,7 +20,6 @@ header {
     align-items: center;
     width: 100%;
     height: 50px;
-    background-color: yellow;
 
     img {
         display: block;
@@ -69,9 +72,9 @@ header {
 
         .navigation {
             display: grid;
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 200px);
             align-items: center;
-            gap: 10px;
+            gap: 3px;
             justify-content: center;
             text-align: center;
             list-style: none;
@@ -80,6 +83,9 @@ header {
 
             a {
                 display: none;
+                font-size: 30px;
+                text-decoration: none;
+
             }
 
         }
@@ -92,12 +98,19 @@ header {
             height: 98%;
             width: 50%;
             padding: 10px;
-            background-color: red;
+            background-color: black;
             transition: 0.5s;
             z-index: 10;
 
             a {
                 display: flex;
+                gap: -40%;
+                color: white;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                text-transform: capitalize;
+
             }
         }
     }
@@ -117,7 +130,7 @@ main {
         text-align: center;
         height: fit-content;
         padding: 10px;
-        border: 3px solid red;
+        color: white;
 
         button {
             width: 200px;
@@ -130,21 +143,47 @@ main {
     }
 
     .aboutus {
-        margin-top: -20px;
+        margin-top: -7px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
-
+        padding: 15px 0;
 
         img {
             width: 100%;
+        }
+
+        h3 {
+            margin-top: 8px;
+            margin-bottom: 20px;
+            font-size: 30px;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        h1 {
+            text-transform: capitalize;
+            font-size: 44px;
+            margin-top: -22px;
+            background: linear-gradient(to bottom, black, white);
+            color: black;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            margin-top: 10px;
+            background-color: white;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
 
 
     .pakages {
+        margin-top: 25px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -152,7 +191,14 @@ main {
         padding: 20px;
         height: auto;
         position: relative;
+        background-color: white;
+        border: 3px solid black;
 
+
+        h1:first-child {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
 
 
         .slideshow-container {
@@ -195,6 +241,7 @@ main {
     }
 
     .testimonies {
+        color: white;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -212,23 +259,40 @@ main {
             }
         }
 
+        h2 {
+            color: white;
+            z-index: inherit;
+        }
+
     }
 
 
     .team {
+        margin-top: 30px;
         display: flex;
         flex-direction: column;
         text-align: center;
+        background-color: white;
+        width: 100%;
+
+        .teammembers {
+            color: black;
+        }
+
     }
 
 
 
     .servicesdetails {
+        margin-top: 20px;
+        padding: 20px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin-bottom: 20px;
+        background-color: rgb(236, 232, 232);
+        color: black;
     }
 
     .knowledge {
@@ -250,7 +314,7 @@ main {
 
         svg {
             position: absolute;
-            top: -24px;
+            top: -27px;
             left: 5;
         }
 
@@ -259,11 +323,10 @@ main {
     .skills1 .outer {
         width: 200px;
         height: 200px;
-        border: 3px solid yellow;
         border-radius: 50%;
         padding: 33px;
-        box-shadow: 6px 6px 10px -1px,
-            -6px -6px 10px -1px;
+        box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+            -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 
     }
 
@@ -272,17 +335,19 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 195px;
-        width: 193px;
-        border: 3px solid yellow;
+        height: 200px;
+        width: 200px;
         border-radius: 50%;
-        box-shadow: inset 6px 6px 10px -1px,
-            -6px -6px 10px -1px;
+        box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+            inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+            -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+            0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+            0px 12px 10px -10px rgba(0, 0, 0, 0.05)
     }
 
     .skills1 circle {
         fill: none;
-        stroke: green;
+        stroke: black;
         stroke-width: 30;
         stroke-dasharray: 735;
         stroke-dashoffset: 0;
@@ -303,7 +368,7 @@ main {
 
         svg {
             position: absolute;
-            top: -24px;
+            top: -28px;
             left: 5;
         }
 
@@ -312,11 +377,10 @@ main {
     .skills2 .outer {
         width: 200px;
         height: 200px;
-        border: 3px solid yellow;
         border-radius: 50%;
         padding: 33px;
-        box-shadow: 6px 6px 10px -1px,
-            -6px -6px 10px -1px;
+        box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+            -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 
     }
 
@@ -325,19 +389,21 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 195px;
-        width: 193px;
-        border: 3px solid yellow;
+        height: 200px;
+        width: 200px;
         border-radius: 50%;
-        box-shadow: inset 6px 6px 10px -1px,
-            -6px -6px 10px -1px;
+        box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+            inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+            -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+            0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+            0px 12px 10px -10px rgba(0, 0, 0, 0.05)
     }
 
 
 
     .skills2 circle {
         fill: none;
-        stroke: green;
+        stroke: black;
         stroke-width: 30;
         stroke-dasharray: 735;
         stroke-dashoffset: 0;
@@ -358,7 +424,7 @@ main {
 
         svg {
             position: absolute;
-            top: -24px;
+            top: -28px;
             left: 5;
         }
 
@@ -367,11 +433,10 @@ main {
     .skills3 .outer {
         width: 200px;
         height: 200px;
-        border: 3px solid yellow;
         border-radius: 50%;
         padding: 33px;
-        box-shadow: 6px 6px 10px -1px,
-            -6px -6px 10px -1px;
+        box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+            -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 
     }
 
@@ -380,19 +445,21 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 195px;
-        width: 193px;
-        border: 3px solid yellow;
+        height: 200px;
+        width: 200px;
         border-radius: 50%;
-        box-shadow: inset 6px 6px 10px -1px,
-            -6px -6px 10px -1px;
+        box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+            inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+            -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+            0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+            0px 12px 10px -10px rgba(0, 0, 0, 0.05)
     }
 
 
 
     .skills3 circle {
         fill: none;
-        stroke: green;
+        stroke: black;
         stroke-width: 30;
         stroke-dasharray: 735;
         stroke-dashoffset: 0;
@@ -412,6 +479,8 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: rgb(28, 27, 27);
+        color: white;
 
     }
 
@@ -424,6 +493,7 @@ main {
         display: flex;
         flex-direction: column;
         margin: 20px 0px;
+
     }
 
 
@@ -453,8 +523,16 @@ main {
             outline: none;
             border-bottom: 3px solid black;
             margin-top: 10px;
+            background-color: inherit;
+            color: white;
+        }
 
+        input:invalid {
+            border-bottom: 3px solid red;
+        }
 
+        input:valid {
+            border-bottom: 3px solid black;
         }
 
         select,
@@ -462,11 +540,15 @@ main {
             width: 100%;
             height: 35px;
             margin-top: 10px;
+            background-color: black;
+            color: white;
+
 
         }
 
         #address2 {
             margin-top: 20px;
+            color: white;
         }
     }
 
@@ -499,6 +581,12 @@ main {
     }
 
 
+    textarea {
+        background-color: inherit;
+        color: white;
+    }
+
+
     input[type="submit"] {
         width: 150px;
         height: 45px;
@@ -508,9 +596,13 @@ main {
     }
 
 
+
+
+
     .ourlocation {
         display: flex;
         flex-direction: column-reverse;
+        background-color: white;
     }
 
     .companyinformation {
@@ -537,6 +629,8 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    background-color: black;
+    color: white;
 
     .socials {
         display: flex;
@@ -545,8 +639,41 @@ footer {
         align-items: center;
         text-align: center;
         gap: 20px;
+        color: white;
     }
+
 }
+
+.main::before {
+    content: "";
+    width: 97%;
+    height: 40%;
+    z-index: -1;
+    position: absolute;
+    background-color: rgb(29, 28, 28, 1);
+}
+
+.aboutus::before {
+    content: "";
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to bottom, white 43%, black 35%);
+}
+
+.testimonies::before {
+
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 88%;
+    background-color: rgb(20, 21, 21);
+    z-index: -1;
+}
+
+
 
 
 
