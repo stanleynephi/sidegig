@@ -591,7 +591,7 @@ main {
             border-bottom: 3px solid black;
             margin-top: 10px;
             background-color: inherit;
-            color: white;
+            color: black;
         }
 
         input:invalid {
@@ -617,7 +617,7 @@ main {
 
         #address2 {
             margin-top: 20px;
-            color: white;
+            color: black;
         }
     }
 
