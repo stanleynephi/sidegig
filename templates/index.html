@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="styles/normalization.css" />
     <link rel="stylesheet" href="styles/medium.css" />
     <link rel="stylesheet" href="styles/large.css" />
-    <link rel="stylesheet" href="styles/sample.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='./styles/scripts/sample.css') }}">
+    <!-- <link rel="stylesheet" href="styles/sample.css" /> -->
     <link rel="stylesheet" href="/images/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/all.css">
   </head>
   <body>
@@ -281,7 +282,7 @@
       </picture>
 
         <div class="forms">
-          <form action="./index.html" method="get" autocomplete="on">
+          <form action="/" method="post" autocomplete="on">
             <fieldset class="userdetails">
               <legend>client information</legend>
               <label>first name<input type="text" name="userfname" id="fname" required></label>
@@ -347,6 +348,7 @@
         <div class="instagram"><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
       </div>
     </footer>
-    <script defer src="./scripts/index.js"></script>
+    <script defer src="{{ url_for('static', filename='.scripts/index.js') }}"></script>
+
   </body>
 </html>
