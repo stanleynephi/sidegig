@@ -10,17 +10,17 @@
     <meta property="og:image" content="" />
     <meta property="og:url" content="" />
     <title></title>
-    <link rel="stylesheet" href="styles/normalization.css" />
-    <link rel="stylesheet" href="styles/medium.css" />
-    <link rel="stylesheet" href="styles/large.css" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='./styles/scripts/sample.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='normalization.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='large.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='medium.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='small.css') }}">
     <!-- <link rel="stylesheet" href="styles/sample.css" /> -->
-    <link rel="stylesheet" href="/images/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/all.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='images/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/all.css') }}">
   </head>
   <body>
       <header>
         <img
-          src="/images/imagessmall.webp"
+        src="{{url_for('static', filename='images/imagessmall.webp')}}"
           alt="Company Logo"
         />
         <div class="controls">
@@ -57,10 +57,11 @@
 
       <section class="aboutme myinformation learnmore reveal">
         <picture>
-          <source media="(max-width: 797px)" srcset="./images/imagessmall.webp">
-          <source media="(min-width: 798px)" srcset="./images/medium.webp">
-          <img src="./images/medium.webp" alt="Descriptive alt text" />
+          <source media="(max-width: 797px)" srcset="{{ url_for('static', filename='images/imagessmall.webp') }}">
+          <source media="(min-width: 798px)" srcset="{{ url_for('static', filename='images/medium.webp') }}">
+          <img src="{{ url_for('static', filename='images/imagessmall.webp') }}" alt="Descriptive alt text" />
       </picture>
+      
         <div class="aboutinfo">
           <h3>about me</h3>
           <h1>stanley n. nephi</h1>
@@ -83,10 +84,11 @@
           <div class="myslides fade">
             <div class="textContent">
               <picture>
-                <source media="(max-width: 797px)" srcset="images/htmlpaper.webp">
-                <source media="(min-width: 798px)" srcset="images/htmlpaper.webp">
-                <img src="images/htmlpaper.webp" alt="Descriptive alt text" />
-               </picture>
+                <source media="(max-width: 797px)" srcset="{{ url_for('static', filename='images/htmlpaper.webp') }}">
+                <source media="(min-width: 798px)" srcset="{{ url_for('static', filename='images/htmlpaper.webp') }}">
+                <img src="{{ url_for('static', filename='images/htmlpaper.webp') }}" alt="Descriptive alt text" />
+            </picture>
+            
                <h1>Front-End Development</h1>
               <p>
                 <ul>
@@ -100,10 +102,11 @@
           <div class="myslides fade">
             <div class="textContent">
               <picture>
-                <source media="(max-width: 797px)" srcset="./images/bonjour.webp">
-                <source media="(min-width: 798px)" srcset="./images/bonjour.webp">
-                <img src="./images/bonjour.webp" alt="Descriptive alt text" />
+                <source media="(max-width: 797px)" srcset="{{ url_for('static', filename='images/bonjour.webp') }}">
+                <source media="(min-width: 798px)" srcset="{{ url_for('static', filename='images/bonjour.webp') }}">
+                <img src="{{ url_for('static', filename='images/bonjour.webp') }}" alt="Descriptive alt text" />
             </picture>
+            
             <h1>French Tutor</h1>
               <p>
                 <ul>
@@ -124,41 +127,45 @@
         <h2>client's testimonies</h2>
         <div class="testimonycontents">
           <div class="infoms fade">
-              <picture>
-          <source media="(max-width: 797px)" srcset="./images/imagessmall.webp">
-          <source media="(min-width: 798px)" srcset="./images/medium.webp">
-          <img src="./images/medium.webp" alt="Descriptive alt text" />
+            <picture>
+              <source media="(max-width: 797px)" srcset="{{ url_for('static', filename='images/imagessmall.webp') }}">
+              <source media="(min-width: 798px)" srcset="{{ url_for('static', filename='images/medium.webp') }}">
+              <img src="{{ url_for('static', filename='images/imagessmall.webp') }}" alt="Descriptive alt text" />
           </picture>
+          
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quibusdam adipisci iste, harum aspernatur neque sapiente alias dignissimos, eum nisi repellat a illum nobis accusantium voluptate? Culpa ipsam nostrum corrupti.
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quam suscipit sapiente, quod aspernatur, nisi sequi accusamus impedit a architecto, veniam laborum quibusdam assumenda amet fugit mollitia voluptas dolorum officia. one
             </p>
           </div>
           <div class="infoms fade">
-              <picture>
-          <source media="(max-width: 797px)" srcset="./images/imagessmall.webp">
-          <source media="(min-width: 798px)" srcset="./images/medium.webp">
-          <img src="./images/medium.webp" alt="Descriptive alt text" />
+            <picture>
+              <source media="(max-width: 797px)" srcset="{{ url_for('static', filename='images/imagessmall.webp') }}">
+              <source media="(min-width: 798px)" srcset="{{ url_for('static', filename='images/medium.webp') }}">
+              <img src="{{ url_for('static', filename='images/imagessmall.webp') }}" alt="Descriptive alt text" />
           </picture>
+          
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quibusdam adipisci iste, harum aspernatur neque sapiente alias dignissimos, eum nisi repellat a illum nobis accusantium voluptate? Culpa ipsam nostrum corrupti.
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quam suscipit sapiente, quod aspernatur, nisi sequi accusamus impedit a architecto, veniam laborum quibusdam assumenda amet fugit mollitia voluptas dolorum officia. two
             </p>
           </div>
           <div class="infoms fade">
-              <picture>
-          <source media="(max-width: 797px)" srcset="./images/imagessmall.webp">
-          <source media="(min-width: 798px)" srcset="./images/medium.webp">
-          <img src="./images/medium.webp" alt="Descriptive alt text" />
+            <picture>
+              <source media="(max-width: 797px)" srcset="{{ url_for('static', filename='images/imagessmall.webp') }}">
+              <source media="(min-width: 798px)" srcset="{{ url_for('static', filename='images/medium.webp') }}">
+              <img src="{{ url_for('static', filename='images/imagessmall.webp') }}" alt="Descriptive alt text" />
           </picture>
+          
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quibusdam adipisci iste, harum aspernatur neque sapiente alias dignissimos, eum nisi repellat a illum nobis accusantium voluptate? Culpa ipsam nostrum corrupti.
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quam suscipit sapiente, quod aspernatur, nisi sequi accusamus impedit a architecto, veniam laborum quibusdam assumenda amet fugit mollitia voluptas dolorum officia. three
             </p>
           </div>
           <div class="infoms fade">
-              <picture>
-          <source media="(max-width: 797px)" srcset="./images/imagessmall.webp">
-          <source media="(min-width: 798px)" srcset="./images/medium.webp">
-          <img src="./images/medium.webp" alt="Descriptive alt text" />
+            <picture>
+              <source media="(max-width: 797px)" srcset="{{ url_for('static', filename='images/imagessmall.webp') }}">
+              <source media="(min-width: 798px)" srcset="{{ url_for('static', filename='images/medium.webp') }}">
+              <img src="{{ url_for('static', filename='images/imagessmall.webp') }}" alt="Descriptive alt text" />
           </picture>
+          
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quibusdam adipisci iste, harum aspernatur neque sapiente alias dignissimos, eum nisi repellat a illum nobis accusantium voluptate? Culpa ipsam nostrum corrupti.
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quam suscipit sapiente, quod aspernatur, nisi sequi accusamus impedit a architecto, veniam laborum quibusdam assumenda amet fugit mollitia voluptas dolorum officia. four
             </p>
@@ -173,20 +180,22 @@
         <div class="universities">
           <h2>Education</h2>
           <div class="member">
-              <picture>
-            <source media="(max-width: 797px)" srcset="./images/BYU_Logo_PNG.webp">
-            <source media="(min-width: 798px)" srcset="./images/BYU_Logo_PNG.webp">
-            <img src="./images/BYU_Logo_PNG.webp" alt="Descriptive alt text" />
-            </picture>
+            <picture>
+              <source media="(max-width: 797px)" srcset="{{ url_for('static', filename='images/BYU_Logo_PNG.webp') }}">
+              <source media="(min-width: 798px)" srcset="{{ url_for('static', filename='images/medium.webp') }}">
+              <img src="{{ url_for('static', filename='images/BYU_Logo_PNG.webp') }}" alt="Descriptive alt text" />
+          </picture>
+          
             <h1>brigham young university-idaho</h1>
           </div>
 
           <div class="member">
-              <picture>
-          <source media="(max-width: 797px)" srcset="./images/imagessmall.webp">
-          <source media="(min-width: 798px)" srcset="./images/medium.webp">
-          <img src="./images/medium.webp" alt="Descriptive alt text" />
-            </picture>
+            <picture>
+              <source media="(max-width: 797px)" srcset="{{ url_for('static', filename='images/imagessmall.webp') }}">
+              <source media="(min-width: 798px)" srcset="{{ url_for('static', filename='images/medium.webp') }}">
+              <img src="{{ url_for('static', filename='images/imagessmall.webp') }}" alt="Descriptive alt text" />
+          </picture>
+          
             <h1>byu pathway</h1>
           </div>
         </div>
@@ -275,11 +284,12 @@
 
       </section>
       <section  id="booking"class="booking">
-      <picture>
-          <source media="(max-width: 797px)" srcset="./images/imagessmall.webp">
-          <source media="(min-width: 798px)" srcset="./images/medium.webp">
-          <img src="./images/medium.webp" alt="Descriptive alt text" />
+        <picture>
+          <source media="(max-width: 797px)" srcset="{{ url_for('static', filename='images/imagessmall.webp') }}">
+          <source media="(min-width: 798px)" srcset="{{ url_for('static', filename='images/medium.webp') }}">
+          <img src="{{ url_for('static', filename='images/imagessmall.webp') }}" alt="Descriptive alt text" />
       </picture>
+      
 
         <div class="forms">
           <form action="/" method="post" autocomplete="on">
@@ -300,15 +310,15 @@
             <fieldset>
               <legend>packages</legend>
               <label>
-                <input type="checkbox" name="package" > web developement
+                <input type="checkbox" name="webdevelopment" > web developement
               </label>
               <label>
-                <input type="checkbox" name="package" > language tutoring(french)
+                <input type="checkbox" name="french" > language tutoring(french)
               </label>
             </fieldset>
             <fieldset>
               <label>leave a message
-                <textarea name="additional info" id="additionalinfo"></textarea>
+                <textarea name="additionalinfo" id="additionalinfo"></textarea>
               </label>
             </fieldset>
 
@@ -348,7 +358,7 @@
         <div class="instagram"><a href="#"><i class="fa-brands fa-instagram"></i></a></div>
       </div>
     </footer>
-    <script defer src="{{ url_for('static', filename='.scripts/index.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='index.js') }}"></script>
 
   </body>
 </html>

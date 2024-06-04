@@ -259,7 +259,7 @@ function plusslides(n) {
 // Automatically change slides every 2 seconds
 function autoShowSlides() {
     plusslides(1);
-    setTimeout(autoShowSlides, 9000); // Adjust the interval as needed
+    setTimeout(autoShowSlides, 4000); // Adjust the interval as needed
 }
 
 autoShowSlides();
