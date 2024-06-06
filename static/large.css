@@ -1,0 +1,592 @@
+@media only screen and (min-width:1024px) {
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500&display=swap');
+
+    body {
+        margin: 3px;
+        padding: 0;
+        background-color: black;
+        background-attachment: fixed;
+
+        img {
+            width: 300px;
+        }
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100px;
+        }
+
+        .controls {
+            .buttons {
+                display: none;
+            }
+
+            nav {
+                .navigation {
+                    display: grid;
+                    grid-template-columns: repeat(4, 200px);
+
+
+                    a {
+                        font-family: Poppins;
+                        color: white;
+                        font-size: 25px;
+                        text-transform: capitalize;
+                        text-decoration: none;
+                    }
+
+
+                    a:after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        transform: scaleX(0);
+                        height: 2px;
+                        bottom: 0px;
+                        left: 0;
+                        background-color: white;
+                        transform-origin: bottom right;
+                        transition: transform 0.25s ease-out;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+
+    main {
+        background-image: url(../static/images/programming.webp);
+        background-attachment: fixed;
+
+        .main {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+
+        .aboutme {
+            height: 100vh;
+            margin: 50px 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            color: white;
+            background-color: black;
+        }
+
+        .pakages {
+            background-color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .slideshow-container {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 90px;
+
+
+
+                .myslides {
+                    width: 300px;
+                }
+
+                .myslides:nth-child(2) {
+                    img {
+                        height: 200px;
+                    }
+                }
+            }
+
+
+            .prev,
+            .next {
+                display: none;
+            }
+        }
+
+        .testimonies {
+            background-color: black;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+            .testimonycontents {
+                display: flex;
+                flex-direction: row;
+                gap: 30px;
+
+
+                .infoms {
+                    width: 250px;
+
+                    img {
+                        width: 200px;
+                    }
+                }
+            }
+        }
+
+
+        .education {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+
+
+            .universities {
+                text-align: center;
+            }
+        }
+
+        .servicesdetails {
+            margin: 50px 0;
+            background-color: white;
+            text-align: center;
+            height: 100vh;
+
+            .knowledges {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                gap: 10%;
+            }
+
+            .knowledge {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .skills1 {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+
+
+                svg {
+                    position: absolute;
+                    top: -27px;
+                    left: 5;
+                }
+
+            }
+
+            .skills1 .outer {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                padding: 33px;
+                box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+
+            }
+
+
+            .skills1 .inner {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+                    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+                    0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+                    0px 12px 10px -10px rgba(0, 0, 0, 0.05)
+            }
+
+            .skills1 circle {
+                fill: none;
+                stroke: black;
+                stroke-width: 24;
+                stroke-dasharray: 740;
+                stroke-dashoffset: 0;
+                animation: anim1 2s linear forwards;
+            }
+
+
+
+            .skills2 {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+
+
+                svg {
+                    position: absolute;
+                    top: -28px;
+                    left: 5;
+                }
+
+            }
+
+            .skills2 .outer {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                padding: 33px;
+                box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+
+            }
+
+
+            .skills2 .inner {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+                    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+                    0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+                    0px 12px 10px -10px rgba(0, 0, 0, 0.05)
+            }
+
+
+
+            .skills2 circle {
+                fill: none;
+                stroke: black;
+                stroke-width: 24;
+                stroke-dasharray: 740;
+                stroke-dashoffset: 0;
+                animation: anim2 2s linear forwards;
+            }
+
+
+
+            .skills3 {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+
+
+                svg {
+                    position: absolute;
+                    top: -28px;
+                    left: 5;
+                }
+
+            }
+
+            .skills3 .outer {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                padding: 33px;
+                box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+
+            }
+
+
+            .skills3 .inner {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+                    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+                    0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+                    0px 12px 10px -10px rgba(0, 0, 0, 0.05)
+            }
+
+
+
+            .skills3 circle {
+                fill: none;
+                stroke: black;
+                stroke-width: 24;
+                stroke-dasharray: 740;
+                stroke-dashoffset: 0;
+                animation: anim3 2s linear forwards;
+            }
+
+
+            .level {
+                font-size: 30px;
+                font-weight: bold;
+                color: black;
+            }
+
+        }
+
+
+        .booking {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .booking picture {
+            display: none;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0px;
+
+
+            ::placeholder {
+                text-transform: capitalize;
+            }
+
+        }
+
+
+        fieldset {
+            border: none;
+        }
+
+        legend {
+            font-size: 20px;
+            margin-bottom: 30px;
+            text-transform: capitalize;
+        }
+
+        label {
+            display: block;
+            width: 320px;
+            text-transform: capitalize;
+            font-family: Poppins;
+            margin: 8px 0;
+
+            input[type="text"],
+            input[type="tel"],
+            input[type="email"] {
+                display: block;
+                width: 100%;
+                height: 25px;
+                border: none;
+                outline: none;
+                border-bottom: 3px solid white;
+                margin-top: 10px;
+                background-color: inherit;
+                color: white;
+            }
+
+            input:invalid {
+                border-bottom: 3px solid white;
+            }
+
+            input:valid {
+                border-bottom: 3px solid white;
+            }
+
+            select,
+            option {
+                width: 100%;
+                height: 35px;
+                margin-top: 10px;
+                background-color: black;
+                color: white;
+                font-family: Poppins;
+                text-transform: capitalize;
+
+
+            }
+
+            #address2 {
+                margin-top: 20px;
+                color: white;
+            }
+        }
+
+        fieldset:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            font-size: 20px;
+            font-weight: bold;
+
+
+            legend {
+                margin-bottom: -2px;
+            }
+        }
+
+
+        fieldset:nth-child(3) {
+
+            label {
+                width: 310px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            textarea {
+                width: 100%;
+                height: 150px;
+                resize: none;
+            }
+        }
+
+
+        textarea {
+            background-color: inherit;
+            color: white;
+        }
+
+
+        input[type="submit"] {
+            width: 150px;
+            height: 45px;
+            font-size: 20px;
+            text-align: center;
+            align-self: center;
+            border-radius: 10px;
+            margin-left: 15px;
+        }
+
+
+
+        .ourlocation {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+
+
+            .companyinformation {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10%;
+
+
+                a,
+                .contactusaddress {
+                    text-decoration: none;
+                    font-size: 20px;
+                    color: black;
+                    font-family: Roboto;
+                    text-transform: capitalize;
+                    margin: 20px 0;
+                }
+            }
+
+            .companylocation {
+                border: 3px solid black;
+                padding: 0;
+            }
+        }
+    }
+
+
+    footer {
+        height: 10vh;
+        background-color: black;
+
+        .socialmedia {
+            color: white;
+        }
+    }
+
+
+
+    button {
+        background-color: white;
+        height: 50px;
+        width: 180px;
+        border: 3px solid black;
+        border-radius: 10px;
+
+
+        a {
+            text-decoration: none;
+            color: black;
+            text-transform: capitalize;
+            font-size: 20px;
+        }
+    }
+
+    #bookasession {
+        width: 180px;
+        height: 40px;
+    }
+
+
+
+
+
+
+    @keyframes anim1 {
+        100% {
+            stroke-dashoffset: 73.5;
+        }
+
+    }
+
+    @keyframes anim2 {
+        100% {
+            stroke-dashoffset: 220.5;
+        }
+
+    }
+
+    @keyframes anim3 {
+        100% {
+            stroke-dashoffset: 257.25;
+        }
+
+    }
+
+
+    @keyframes borderSlide {
+        0% {
+            border-bottom: 3px solid transparent;
+            width: 0;
+        }
+
+        100% {
+            border-bottom: 3px solid white;
+            width: 100%;
+        }
+    }
+
+
+
+}

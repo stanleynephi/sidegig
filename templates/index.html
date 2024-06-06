@@ -12,6 +12,7 @@
     <title></title>
     <link rel="stylesheet" href="{{ url_for('static', filename='normalization.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='large.css') }}">
+    <!-- <link rel="stylesheet" href="../static/large.css"> -->
     <link rel="stylesheet" href="{{ url_for('static', filename='medium.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='small.css') }}">
     <!-- <link rel="stylesheet" href="styles/sample.css" /> -->
@@ -36,8 +37,8 @@
           </div>
           <nav>
             <ul class="navigation">
-              <li><a href="./index.html">Home</a></li>
-              <li><a href="#main">learn more</a></li>
+              <li><a href="/templates/index.html">Home</a></li>
+              <li><a href="#aboutme">learn more</a></li>
               <li><a href="#packages">Services</a></li>
               <li><a href="#booking">Contact</a></li>
             </ul>
@@ -55,12 +56,12 @@
         <button><a href="#booking">contact me now</a></button>
       </section>
 
-      <section class="aboutme myinformation learnmore reveal">
+      <section class="aboutme myinformation learnmore reveal" id="aboutme">
         <picture>
           <source media="(max-width: 797px)" srcset="{{ url_for('static', filename='images/imagessmall.webp') }}">
           <source media="(min-width: 798px)" srcset="{{ url_for('static', filename='images/medium.webp') }}">
           <img src="{{ url_for('static', filename='images/imagessmall.webp') }}" alt="Descriptive alt text" />
-      </picture>
+        </picture>
       
         <div class="aboutinfo">
           <h3>about me</h3>
@@ -96,7 +97,7 @@
                   <li>maintain and updates fron-end of webpages for both individuals and organizations</li>
                 </ul>
               </p>
-                <button id="bookasession"><a href="#sessions">contact me</a></button>
+                <button id="bookasession"><a href="#booking">contact me</a></button>
             </div>
           </div>
           <div class="myslides fade">
@@ -114,7 +115,7 @@
                   <li>provide translations from english to french and from french to english</li>
                 </ul>
               </p>
-                <button id="bookasession"><a href="#sessions">book a session</a></button>
+                <button id="bookasession"><a href="#booking">book a session</a></button>
             </div>
           </div>     
           <a class="prev" onclick="plusSlides(-1)"> &#10094</a>
@@ -181,9 +182,9 @@
           <h2>Education</h2>
           <div class="member">
             <picture>
-              <source media="(max-width: 797px)" srcset="{{ url_for('static', filename='images/BYU_Logo_PNG.webp') }}">
-              <source media="(min-width: 798px)" srcset="{{ url_for('static', filename='images/medium.webp') }}">
-              <img src="{{ url_for('static', filename='images/BYU_Logo_PNG.webp') }}" alt="Descriptive alt text" />
+              <source media="(max-width: 797px)" srcset="{{ url_for('static', filename='images/byui.webp') }}">
+              <source media="(min-width: 798px)" srcset="{{ url_for('static', filename='images/byui.webp') }}">
+              <img src="{{ url_for('static', filename='images/byui.webp') }}" alt="Descriptive alt text" />
           </picture>
           
             <h1>brigham young university-idaho</h1>
@@ -206,78 +207,80 @@
       <!-- skills -->
       <section class="servicesdetails learnmore moreinfo reveal">
         <h1>Skills</h1>
-        <div class="knowledge">
-          <h1>html/css</h1>
-          <div class="skills1">
-            <div class="outer">
-              <div class="inner">
-                <div class="level">
+        <div class="knowledges">
+          <div class="knowledge">
+            <h1>html/css</h1>
+            <div class="skills1">
+              <div class="outer">
+                <div class="inner">
+                  <div class="level">
+                  </div>
                 </div>
               </div>
+    
+              
+            <!-- svgsection -->
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="260px" height="360px">
+              <defs>
+                 <linearGradient id="GradientColor1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="orange" />
+                    <stop offset="100%" stop-color="blue" />
+                 </linearGradient>
+              </defs>
+              <circle cx="130" cy="160" r="118" stroke-linecap="round"/>
+             </svg>
             </div>
-  
-            
-          <!-- svgsection -->
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="260px" height="360px">
-            <defs>
-               <linearGradient id="GradientColor1" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="orange" />
-                  <stop offset="100%" stop-color="blue" />
-               </linearGradient>
-            </defs>
-            <circle cx="130" cy="160" r="118" stroke-linecap="round"/>
-           </svg>
           </div>
-        </div>
-
-
-        <!-- skill2 -->
-        <div class="knowledge">
-          <h1>python</h1>
-          <div class="skills2">
-            <div class="outer">
-              <div class="inner">
-                <div class="level">
+  
+  
+          <!-- skill2 -->
+          <div class="knowledge">
+            <h1>python</h1>
+            <div class="skills2">
+              <div class="outer">
+                <div class="inner">
+                  <div class="level">
+                  </div>
                 </div>
               </div>
+    
+              
+            <!-- svgsection -->
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="260px" height="360px">
+              <defs>
+                 <linearGradient id="GradientColor2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="yellow" />
+                    <stop offset="100%" stop-color="blue" />
+                 </linearGradient>
+              </defs>
+              <circle cx="130" cy="160" r="118" stroke-linecap="round"/>
+             </svg>
             </div>
-  
-            
-          <!-- svgsection -->
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="260px" height="360px">
-            <defs>
-               <linearGradient id="GradientColor2" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="yellow" />
-                  <stop offset="100%" stop-color="blue" />
-               </linearGradient>
-            </defs>
-            <circle cx="130" cy="160" r="118" stroke-linecap="round"/>
-           </svg>
           </div>
-        </div>
-
-        <!-- skill3 -->
-        <div class="knowledge">
-          <h1>javascript</h1>
-          <div class="skills3">
-            <div class="outer">
-              <div class="inner">
-                <div class="level">
+  
+          <!-- skill3 -->
+          <div class="knowledge">
+            <h1>javascript</h1>
+            <div class="skills3">
+              <div class="outer">
+                <div class="inner">
+                  <div class="level">
+                  </div>
                 </div>
               </div>
+    
+              
+            <!-- svgsection -->
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="260px" height="360px">
+              <defs>
+                 <linearGradient id="GradientColor3" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="yellow" />
+                    <stop offset="100%" stop-color="black" />
+                 </linearGradient>
+              </defs>
+              <circle cx="130" cy="160" r="118" stroke-linecap="round"/>
+             </svg>
             </div>
-  
-            
-          <!-- svgsection -->
-          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="260px" height="360px">
-            <defs>
-               <linearGradient id="GradientColor3" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="yellow" />
-                  <stop offset="100%" stop-color="black" />
-               </linearGradient>
-            </defs>
-            <circle cx="130" cy="160" r="118" stroke-linecap="round"/>
-           </svg>
           </div>
         </div>
 
@@ -292,7 +295,7 @@
       
 
         <div class="forms">
-          <form action="/" method="post" autocomplete="on">
+          <form action="/" method="POST" autocomplete="on">
             <fieldset class="userdetails">
               <legend>client information</legend>
               <label>first name<input type="text" name="userfname" id="fname" required></label>

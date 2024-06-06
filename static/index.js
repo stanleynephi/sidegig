@@ -1,39 +1,3 @@
-let slideIndex = 1
-showSlides(slideIndex)
-
-
-function plusSlides(n){
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n){
-  showSlides(slideIndex = n)
-}
-
-function showSlides(n){
-  let i
-  let slides = document.getElementsByClassName("myslides")
-  if(n > slides.length){
-    slideIndex = 1
-  }
-
-  if(n<1){
-    slideIndex = slides.length
-  }
-
-  for(i=0; i<slides.length; i++){
-    slides[i].style.display = "none"
-  }
-  
-  slides[slideIndex-1].style.display = "block";
-
-}
-
-
-
-
-
-
 window.addEventListener("scroll",reveal);
 
 // function to activate the code
@@ -53,30 +17,6 @@ function reveal(){
         }
     }
 }
-
-
-
-// let myIndex = 0
-// carousel()
-
-// function carousel(){
-//   let i
-
-//   let  x = document.getElementsByClassName("infoms")
-//   for(i=0; i<x.length; i++) {
-//     x[i].style.display = "none"
-//   }
-
-//   myIndex++
-
-//   if(myIndex > x.length){
-//     myIndex=1
-//   }
-
-//   x[myIndex-1].style.display = "flex"
-  
-//   setTimeout(carousel,5000)
-// }
 
 
 
@@ -226,7 +166,12 @@ document.querySelectorAll(".navigation a").forEach(
 
 
 
-let slidesindex = 1;
+//use the width of the window
+let windowWidth = window.innerWidth;
+if(windowWidth < 1000){
+
+
+  let slidesindex = 1;
 showslides(slidesindex);
 
 function currentslide(n) {
@@ -263,6 +208,42 @@ function autoShowSlides() {
 }
 
 autoShowSlides();
+
+
+
+
+//slides for packages
+let slideIndex = 1
+showSlides(slideIndex)
+
+
+function plusSlides(n){
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n){
+  showSlides(slideIndex = n)
+}
+
+function showSlides(n){
+  let i
+  let slides = document.getElementsByClassName("myslides")
+  if(n > slides.length){
+    slideIndex = 1
+  }
+
+  if(n<1){
+    slideIndex = slides.length
+  }
+
+  for(i=0; i<slides.length; i++){
+    slides[i].style.display = "none"
+  }
+  
+  slides[slideIndex-1].style.display = "block";
+
+}
+}
 
 
 
