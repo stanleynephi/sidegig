@@ -3,6 +3,11 @@ import mysql.connector
 
 # Initialize the Flask application
 app = Flask(__name__)
+#add the configs
+app.config.from_mapping(
+    secret_key="dev"
+)
+app.config.from_prefixed_env()
 
 #def create a database
 def create_database():
